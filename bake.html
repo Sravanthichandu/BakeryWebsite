@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.jpeg" alt="Royal Bakery">  
+      </div>
+      <h1 id="name">ROYAL BAKERY</h1>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="home" id="home">
+
+    </section>
+    <section id="menu">
+      <center><h1>Our Products</h1>
+          <p class="ps">For more than 15 years, Royal Bakery has been making Naraspur's favorite baked goods the old-<br>fashioned way: from scratch, in small batches, and using the finest ingredients.</p>
+      </center>
+    <!-- Slideshow container -->
+  <div class="slideshow-container">
+  
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="https://images.pexels.com/photos/1775283/pexels-photo-1775283.jpeg?auto=compress&cs=tinysrgb&w=1600" style="width:100%">
+     <figcaption class="text">&nbsp;Cookie's</figcaption>
+      <img>
+      <img>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="https://shineroadindia.com/new_blog/wp-content/uploads/2020/08/slice-of-cake-2.jpg" style="width:100%">
+      <figcaption class="text">Cake's</figcaption>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="https://images.pexels.com/photos/635409/pexels-photo-635409.jpeg?auto=compress&cs=tinysrgb&w=1600" style="width:100%">
+      <figcaption class="text">Cupcake's</figcaption>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  </section>
+    <section class="newsletter" id="contact">
+      <div class="Newsletter">
+        <h1>Join Our Newsletter</h1>
+        <p>Get the freshest Magnolia Bakery updates and offers right to your inbox!
+          <br>Plus, enjoy 10% off on your birthday when you share the date with us!
+        </p>
+
+        <input type="email" placeholder="ENTER YOUR EMAIL ADDRESS" id="email">
+      </div>
+    </section>
+    <footer style="background-color: #afe9cc;">
+      <center><img src="logo.jpeg" alt="logo" class="blogo" style="align-items: center;"></center>
+     <div class="foot1">
+      <h2 >CONTACT US</h2><br>
+    
+      <p>CAREERS</p>
+      <p>PRESS</p>
+      <p>GIFT CARDS</p>
+      <p>SUBSCRIPTION</p>
+      <p>GIVING BACK</p>
+    
+    <br>
+    <br>
+    <div class="foot2">
+      <p>DO NOT SELL MY INFORMATION</p>
+      <p>PRIVACY POLICY</p>
+      <p>TERMS OF SERVICE</p>
+    </div>
+  </div>
+    <center><p class="copy"></p>&copy; 2023 The Royal Bakery. All rights reserved.</center>
+
+    </footer>
+  </main>
+</body>
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  
+</html>
